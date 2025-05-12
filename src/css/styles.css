@@ -1,0 +1,293 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Clean and readable font for body text */
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Default text color */
+}
+
+/* General container styling */
+.container {
+    max-width: 800px; /* Increased width for better layout */
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Style the page title */
+#page-title {
+    font-family: 'Poppins', sans-serif; /* Bold and modern font for the header */
+    display: flex;
+    align-items: center; /* Align the icon and text vertically */
+    justify-content: center; /* Center the header on the page */
+    font-size: 2.5rem; /* Slightly larger font size for emphasis */
+    color: #333;
+    margin: 20px 0; /* Add spacing around the title */
+}
+
+#page-title i {
+    margin-right: 10px; /* Add spacing between the icon and the text */
+    color: #00796b; /* Match the greenish-blue theme */
+}
+
+/* General button styling */
+button {
+    font-family: 'Roboto', sans-serif; /* Use the body font for buttons */
+    padding: 8px 12px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004d40; /* Darker shade for hover */
+}
+
+/* Input styling */
+input[type="text"] {
+    font-family: 'Roboto', sans-serif; /* Use the body font for inputs */
+    width: calc(100% - 24px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* List container styling */
+.list-container {
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0; /* Neutral border color */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fafafa; /* Light gray background */
+}
+
+/* List header styling */
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.list-header h3 {
+    margin: 0;
+    font-size: 16px; /* Slightly smaller font size */
+    color: #212121; /* Dark gray for better contrast */
+}
+
+/* Delete button styling */
+.list-header button {
+    background-color: #d32f2f; /* Accessible red */
+    color: white;
+    padding: 6px 10px; /* Smaller padding for delete buttons */
+    font-size: 12px; /* Smaller font size */
+}
+
+.list-header button:hover {
+    background-color: #9a0007; /* Darker red for hover */
+}
+
+/* Todo item styling */
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #e0e0e0; /* Neutral border color */
+}
+
+.todo-item:last-child {
+    border-bottom: none;
+}
+
+.todo-item span {
+    flex-grow: 1;
+    font-size: 14px; /* Slightly smaller font size */
+    color: #424242; /* Dark gray for better contrast */
+}
+
+/* Todo item button styling */
+.todo-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1976d2; /* Accessible blue */
+    font-size: 12px; /* Smaller font size */
+    margin-left: 5px;
+    padding: 4px 6px; /* Compact padding */
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.todo-item button:hover {
+    background-color: #e3f2fd; /* Light blue background for hover */
+    color: #0d47a1; /* Darker blue for hover */
+}
+
+/* Completed todo item styling */
+.todo-item.completed span {
+    text-decoration: line-through; /* Strikethrough text for completed items */
+    color: #757575; /* Lighter gray for completed items */
+}
+
+.todo-item.completed button {
+    color: #4caf50; /* Green color for "Undo" button */
+}
+
+.todo-item.completed button:hover {
+    background-color: #e8f5e9; /* Light green background for hover */
+}
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Show modal when the hidden class is removed */
+.modal:not(.hidden) {
+    display: block;
+}
+
+/* Button group styling */
+.button-group {
+    display: flex;
+    gap: 10px; /* Add spacing between buttons */
+}
+
+.button-group button {
+    padding: 6px 10px; /* Compact button padding */
+    font-size: 14px; /* Consistent font size */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-group button:first-child {
+    background-color: #00796b; /* Greenish-blue for "Open" */
+    color: white;
+}
+
+.button-group button:first-child:hover {
+    background-color: #004d40; /* Darker greenish-blue for hover */
+}
+
+.button-group button:last-child {
+    background-color: #d32f2f; /* Red for "Delete" */
+    color: white;
+}
+
+.button-group button:last-child:hover {
+    background-color: #9a0007; /* Darker red for hover */
+}
+
+/* Align the input and button on the same line */
+#list-manager {
+    display: flex;
+    justify-content: center; /* Center the input/button section */
+    margin-top: 20px;
+}
+
+#list-manager > div {
+    display: flex;
+    align-items: center; /* Align the input and button along their centers */
+    gap: 10px; /* Add spacing between the input and button */
+    width: 100%;
+    max-width: 600px; /* Limit the width of the input/button section */
+}
+
+#list-input {
+    flex: 1; /* Make the input take up the remaining space */
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 0; /* Remove bottom margin to fix alignment */
+}
+
+#add-list-button {
+    padding: 8px 16px;
+    background-color: #00796b; /* Greenish-blue for consistency */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+#add-list-button:hover {
+    background-color: #004d40; /* Darker greenish-blue for hover */
+}
+
+/* Sticky footer styling */
+#sticky-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #00796b; /* Greenish-blue background */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#sticky-footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#sticky-footer a:hover {
+    text-decoration: underline;
+}

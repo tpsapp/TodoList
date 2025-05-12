@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 id="page-title">
+        <i class="fas fa-clipboard-list"></i> Todo List Manager
+    </h1>
+    <div id="list-manager" class="container">
+        <div>
+            <input type="text" id="list-input" placeholder="New List Name" />
+            <button id="add-list-button">Add List</button>
+        </div>
+    </div>
+    <div id="lists-container" class="container"></div>
+
+    <!-- Modal for editing a list -->
+    <div id="list-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="todo-list-container"></div>
+            <input type="text" id="todo-input" placeholder="Add a todo" />
+            <button id="add-todo-button">Add Todo</button>
+        </div>
+    </div>
+
+    <!-- Sticky footer -->
+    <footer id="sticky-footer">
+        <p>
+            <a href="#" id="github-link" target="_blank">GitHub Repository</a>
+        </p>
+    </footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
